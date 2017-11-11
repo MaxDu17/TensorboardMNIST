@@ -122,8 +122,8 @@ def train():
   # Merge all the summaries and write them out to
   # /tmp/tensorflow/mnist/logs/mnist_with_summaries (by default)
   merged = tf.summary.merge_all()
-  train_writer = tf.summary.FileWriter(FLAGS.log_dir + '/train', sess.graph)
-  test_writer = tf.summary.FileWriter(FLAGS.log_dir + '/test')
+  train_writer = tf.summary.FileWriter('tmp/train', sess.graph)
+  test_writer = tf.summary.FileWriter('tmp/test')
   tf.global_variables_initializer().run()
 
   # Train the model, and also write summaries.
